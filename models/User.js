@@ -35,6 +35,5 @@ const userSchema = new mongoose.Schema({
     required: true,
   },
 });
-// firstName, lastName, email, password, role - [student, teacher, admin]
 
 export const User = mongoose.model("User", userSchema);

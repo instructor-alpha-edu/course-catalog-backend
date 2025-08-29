@@ -1,5 +1,11 @@
 import mongoose from "mongoose";
 
+export const Levels = Object.freeze({
+  BEGINNER: "beginner",
+  INTERMEDIATE: "intermediate",
+  ADVANCED: "advanced",
+});
+
 const courseSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -13,10 +19,9 @@ const courseSchema = new mongoose.Schema({
   },
   level: {
     type: String,
-    enum: ["beginner", "intermediate", "advanced"],
-    default: "beginner",
+    enum: Object.values(Levels),
+    default: Levels.BEGINNER,
     required: true,
-    trim: true,
   },
   imageUrl: {
     type: String,
