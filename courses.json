@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Современный JavaScript для начинающих",
+    "description": "Освойте основы языка JavaScript включая переменные функции объекты классы и работу с DOM",
+    "level": "beginner",
+    "imageUrl": "https://server.portfolio-adilzhexenov.kz/uploads/courses/1.png"
+  },
+  {
+    "title": "Бэкенд на Node.js и Express",
+    "description": "Научитесь создавать серверное приложение подключать базы данных и реализовывать аутентификацию пользователей",
+    "level": "intermediate",
+    "imageUrl": "https://server.portfolio-adilzhexenov.kz/uploads/courses/2.png"
+  },
+  {
+    "title": "React с нуля",
+    "description": "Изучите компоненты состояние хуки и работу с внешними API создайте собственное одностраничное приложение",
+    "level": "beginner",
+    "imageUrl": "https://server.portfolio-adilzhexenov.kz/uploads/courses/3.png"
+  },
+  {
+    "title": "Проектирование и защита REST API",
+    "description": "Разрабатывайте надежные API управляйте доступом с помощью токенов и внедряйте роль администратор преподаватель и студент",
+    "level": "intermediate",
+    "imageUrl": "https://server.portfolio-adilzhexenov.kz/uploads/courses/4.png"
+  },
+  {
+    "title": "Базы данных MongoDB на практике",
+    "description": "Изучите хранение данных в формате документов настройте коллекции выполняйте запросы индексацию и агрегации",
+    "level": "intermediate",
+    "imageUrl": "https://server.portfolio-adilzhexenov.kz/uploads/courses/5.png"
+  },
+  {
+    "title": "Продвинутая разработка на Nest.js",
+    "description": "Изучите модульную архитектуру Nest.js работу с декораторами внедрение зависимостей интеграцию с базами данных и построение масштабируемых корпоративных приложений",
+    "level": "advanced",
+    "imageUrl": "https://server.portfolio-adilzhexenov.kz/uploads/courses/6.png"
+  }
+]
