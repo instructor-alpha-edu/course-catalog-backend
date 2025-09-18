@@ -7,5 +7,6 @@ const router = Router();
 
 router.patch("/make/teacher/:id", requireAuth, allowRoles(Roles.ADMIN), UserController.makeTeacher);
 router.get("/me", requireAuth, UserController.getMe);
+router.get("/", requireAuth, allowRoles(Roles.ADMIN), UserController.getAll);
 
 export default router;

@@ -13,7 +13,12 @@ class EnrollmentController {
 
   async getMyEnrollments(req, res) {
     try {
-      const response = await Enrollment.find({ student: req.userId }).populate("course");
+      const response = await Enrollment.find({ student: req.userId }).populate({
+        path: "course",
+        populate: {
+          path: "teacher",
+        },
+      });
       const courses = response.map(item => item.course);
       res.json(courses);
     } catch (error) {

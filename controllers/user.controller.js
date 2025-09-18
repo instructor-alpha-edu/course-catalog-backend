@@ -25,6 +25,15 @@ class UserController {
       res.status(500).json({ error: error.message });
     }
   }
+
+  async getAll(req, res) {
+    try {
+      const users = await User.find({ role: { $ne: Roles.ADMIN } });
+      res.json(users);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  }
 }
 
 export default new UserController();
