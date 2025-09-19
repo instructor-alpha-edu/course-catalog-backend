@@ -55,7 +55,7 @@ const authPaths = {
           description: "Email already used",
         },
         422: {
-          description: "Failed to validation",
+          description: "Validation failed",
         },
         500: {
           description: "Internal server error",
@@ -109,7 +109,7 @@ const authPaths = {
           description: "Invalid email or password",
         },
         422: {
-          description: "Failed to validation",
+          description: "Validation failed",
         },
         500: {
           description: "Internal server error",

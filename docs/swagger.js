@@ -8,6 +8,7 @@ import enrollmentSchema from "./schemas/enrollment.schema.js";
 import authPaths from "./paths/auth.paths.js";
 import userPaths from "./paths/user.paths.js";
 import coursePaths from "./paths/course.paths.js";
+import enrollmentPaths from "./paths/enrollment.paths.js";
 
 const swaggerDoc = swaggerJSDoc({
   definition: {
@@ -31,7 +32,7 @@ const swaggerDoc = swaggerJSDoc({
         },
       },
     },
-    paths: { ...authPaths, ...userPaths, ...coursePaths },
+    paths: { ...authPaths, ...userPaths, ...coursePaths, ...enrollmentPaths },
   },
   apis: [],
 });
