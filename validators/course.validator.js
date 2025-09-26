@@ -24,22 +24,4 @@ const level = body("level")
     `Поле 'level' должен содержать один из следующих значений: ${Object.values(Levels).join(", ")}`
   );
 
-const imageUrl = body("imageUrl")
-  .exists()
-  .withMessage("Поле 'imageUrl' обязательна")
-  .isURL()
-  .withMessage("Поле 'imageUrl' должна быть ссылкой");
-
-const teacherId = body("teacherId")
-  .exists()
-  .withMessage("Поле 'teacherId' обязательна")
-  .isMongoId()
-  .withMessage("Поле 'teacherId' должен быть в формате 'ObjectId'");
-
-export const createCourseValidator = createValidatorMiddleware([
-  title,
-  description,
-  level,
-  imageUrl,
-  teacherId,
-]);
+export const createCourseValidator = createValidatorMiddleware([title, description, level]);

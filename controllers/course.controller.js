@@ -1,10 +1,14 @@
 import { Course } from "../models/Course.js";
 import { Roles, User } from "../models/User.js";
+import GoogleCloudStorageService from "../services/file.storage.js";
 
 class CourseController {
   async create(req, res) {
     try {
-      const { title, description, level, imageUrl, teacherId } = req.body;
+      const { title, description, level, teacherId } = req.body;
+
+      const imageUrl = await GoogleCloudStorageService.uploadFile(req.file, "courses");
+
       const courseDetails = {
         title,
         description,

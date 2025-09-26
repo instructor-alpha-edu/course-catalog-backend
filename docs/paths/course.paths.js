@@ -27,10 +27,10 @@ const coursePaths = {
       requestBody: {
         required: true,
         content: {
-          "application/json": {
+          "multipart/form-data": {
             schema: {
               type: "object",
-              required: ["title", "description", "level", "imageUrl"],
+              required: ["title", "description", "level", "image"],
               properties: {
                 title: {
                   type: "string",
@@ -45,9 +45,10 @@ const coursePaths = {
                   enum: ["beginner", "intermediate", "advanced"],
                   example: "beginner",
                 },
-                imageUrl: {
+                image: {
                   type: "string",
-                  example: "https://example.com/course-image.png",
+                  format: "binary",
+                  description: "Course image",
                 },
                 teacherId: {
                   type: "string",
